@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+Grievance Support - React Web App (Hackathon)
+This repository contains the Grievance Support React Web Application, developed as part of a hackathon project. The application is designed to provide a seamless way for users to report grievances, track their progress, and receive updates, while offering an admin interface for efficient grievance management.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Features
+User Authentication: Secure login functionality using Firebase.
+Grievance Reporting: Users can select a domain, fill in detailed grievance forms, and submit them for review.
+Progress Tracking: Users can view the progress of their reported grievances in real-time.
+Multi-Language Support: Grievance forms can be filled out in the user’s preferred language.
+Dashboard Access: A dedicated dashboard displays user-specific grievances and updates.
+Admin Features
+Admin Dashboard: Admins can view and manage all grievances submitted by users.
+Status Updates: Admins can update grievance statuses, which are instantly reflected on the user side.
+Query Management: Admins can respond to user queries submitted through the contact form.
+PDF Uploads: Admins can upload PDF documents (e.g., reports) for grievances, which users can view on their profiles.
+Technical Highlights
+React.js Frontend: Built with React.js for a dynamic and responsive user interface.
+Firebase Backend: Utilizes Firebase Realtime Database for data storage and Firebase Authentication for secure login.
+Neat and Intuitive UI: Inspired by professional design principles, the UI ensures a seamless user experience.
+Installation and Setup
+Clone the Repository:
 
-## Available Scripts
+bash
+Copy code
+git clone https://github.com/amulyarajula/GreivanceSupport-ReactWebApp-Hackathon.git
+cd GreivanceSupport-ReactWebApp-Hackathon
+Install Dependencies: Ensure you have Node.js installed, then run:
 
-In the project directory, you can run:
+bash
+Copy code
+npm install
+Configure Firebase:
 
-### `npm start`
+Create a Firebase project at Firebase Console.
+Add your Firebase configuration to a .env file in the root of the project:
+env
+Copy code
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+Run the Application:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+Access the App: Open your browser and navigate to http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Folder Structure
+graphql
+Copy code
+src/
+├── components/          # Reusable UI components
+├── pages/               # Main application pages
+├── context/             # Context API files for state management
+├── firebase/            # Firebase configuration and utility files
+├── styles/              # CSS and style-related files
+├── App.js               # Application root
+└── index.js             # Entry point of the application
+How It Works
+User Journey:
 
-### `npm test`
+Users log in and are prompted to enter their details.
+They select a grievance domain and fill out a detailed grievance form.
+Submitted grievances are reflected in the Firebase Realtime Database.
+Admin Workflow:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Admins log in through a dedicated admin interface.
+Admins can view all grievances, update statuses, and respond to user queries.
+Updates are instantly reflected on the user side.
+Tech Stack
+Frontend: React.js, CSS
+Backend: Firebase Realtime Database, Firebase Authentication, Firebase Storage
+Tools: Visual Studio Code, Git, npm
+Future Enhancements
+Advanced Analytics: Add charts and graphs to provide grievance trends and insights.
+AI Recommendations: Suggest solutions or related FAQs to users based on grievance categories.
+Mobile App: Extend functionality to Android and iOS platforms.
+Contributions
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and create a pull request.
 
-### `npm run build`
+License
+This project is licensed under the MIT License.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgments
+Developed by Amulya Rajula and team during a hackathon event.
+Special thanks to the mentors and organizers for their support and guidance.
